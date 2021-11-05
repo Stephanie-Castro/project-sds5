@@ -8,3 +8,12 @@ export function getAMountBySeller() {
         return AxiosResponse.data;
       });
   }
+
+
+  export function getSuccessBySeller() {
+    return axios
+      .get(BASE_URL + "/sales/success-by-seller")
+      .then((AxiosResponse) => {
+        return AxiosResponse.data;
+      });
+  }
