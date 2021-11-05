@@ -17,3 +17,11 @@ export function getAMountBySeller() {
         return AxiosResponse.data;
       });
   }
+
+  export function getAllSalesWithPagination(pageNumber: number, sizeNumber: number) {
+    return axios
+      .get(BASE_URL + "/sales?page=" + pageNumber + "&size=" + sizeNumber)
+      .then((AxiosResponse) => {
+        return AxiosResponse.data;
+      });
+  }
