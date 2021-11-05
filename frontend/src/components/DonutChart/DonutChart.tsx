@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
-import { getAMountBySeller } from '../../services/apiService';
-import { SaleSum } from '../../types/sale';
+import { getAMountBySeller } from "../../services/apiService";
+import { SaleSum } from "../../types/sale";
 
 type ChartData = {
   labels: string[];
@@ -8,8 +9,7 @@ type ChartData = {
 };
 
 const DonutChart = () => {
-  //FORMA ERADA
-  let chartData: ChartData = { labels: [], series: [] };
+  const [chartData, setChartData] = useState<ChartData>({ labels: [], series: [] });
 
   /*
     const mockData = {
@@ -18,14 +18,16 @@ const DonutChart = () => {
     }
     */
 
+  useEffect(() => {
     getAMountBySeller().then((data) => {
-        const result = data as SaleSum[];
-        const myLabels = result.map(x => x.sellerName);
-        const mySeries = result.map(x => x.sum);
-        
-        chartData = { labels: myLabels, series: mySeries };
-        console.log(chartData)
-    })
+      const result = data as SaleSum[];
+      const myLabels = result.map((x) => x.sellerName);
+      const mySeries = result.map((x) => x.sum);
+      
+      setChartData({ labels: myLabels, series: mySeries });
+      console.log(chartData);
+    });
+  }, []);
 
   const options = {
     legend: {
