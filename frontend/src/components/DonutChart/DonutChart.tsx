@@ -25,9 +25,8 @@ const DonutChart = () => {
       const mySeries = result.map((x) => x.sum);
       
       setChartData({ labels: myLabels, series: mySeries });
-      console.log(chartData);
     });
-  }, []);
+  }, [chartData]);
 
   const options = {
     legend: {
