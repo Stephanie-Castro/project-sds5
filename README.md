@@ -20,6 +20,8 @@ Projeto que gerencia as vendas de uma loja fictícia e que exibe os resultados a
 
 - [React](https://pt-br.reactjs.org/)
 
+- [React ApexCharts](https://apexcharts.com/docs/react-charts/)
+
 - [Typescript](https://www.typescriptlang.org/)
 
 - [PostgreSQL](https://www.postgresql.org/)
@@ -42,5 +44,5 @@ Projeto que gerencia as vendas de uma loja fictícia e que exibe os resultados a
 
 ### Executing program
 * Executar a aplicação backend. 
-* No terminal do projeto frontend executar `npm start` e PRONTO! 
+* No terminal do projeto forntend executar `npm start` e PRONTO! 
 * No navegador acesse http://localhost:3000 (ou a porta de preferência) para ver o funcionamento.
