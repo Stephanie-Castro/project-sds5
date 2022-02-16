@@ -42,5 +42,5 @@ Projeto que gerencia as vendas de uma loja fictícia e que exibe os resultados a
 
 ### Executing program
 * Executar a aplicação backend. 
-* No terminal do projeto forntend executar `npm start` e PRONTO! 
+* No terminal do projeto frontend executar `npm start` e PRONTO! 
 * No navegador acesse http://localhost:3000 (ou a porta de preferência) para ver o funcionamento.
